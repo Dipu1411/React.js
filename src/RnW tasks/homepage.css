@@ -1,0 +1,143 @@
+/* Global */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8fdf9;
+}
+
+
+/* Header */
+
+.main-header {
+    background: #ffffff;
+    border-bottom: 3px solid #198754;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    /* z-index: 100; */
+}
+
+.logo {
+    color: #198754;
+    font-weight: 700;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #198754;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #198754;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Hero Section */
+
+.hero-section {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #e6f4ea, #ffffff);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-section span {
+    color: #198754;
+}
+
+.hero-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.3);
+}
+
+
+/* Content Section */
+
+.content-section {
+    padding: 60px 0;
+}
+
+.content-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s;
+}
+
+.content-box:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Footer */
+
+.footer {
+    background: #198754;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Animations */
+
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
