@@ -9,7 +9,7 @@ export default function Product() {
             <div>
                 <Link to="electronic">Electronic</Link>
                 <Link to="clothing">Clothing</Link>
-                <Link to="books">Books</Link>
+                <Link to="jwellery">Jewellery</Link>
             </div>
             <div>
                 <Outlet />

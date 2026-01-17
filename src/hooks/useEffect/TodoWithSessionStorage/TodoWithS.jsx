@@ -7,8 +7,6 @@ export default function TodoWithS() {
     useEffect(() => {
         const storeTodos = JSON.parse(sessionStorage.getItem("todos")) || [];
         setTodos(storeTodos);
-
-
     }, []);
 
     useEffect(() => {
