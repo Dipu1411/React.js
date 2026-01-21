@@ -52,13 +52,7 @@ export default function Electronic() {
                 <option value="highToLow">High to Low</option>
             </select>
 
-            {/* FIXED PRICE FILTER */ }
-            <input
-                type="number"
-                placeholder="Max Price"
-                value={ maxPrice }
-                onChange={ (e) => setMaxPrice(e.target.value) }
-            />
+
 
             { filteredProducts.map((item) => (
                 <div key={ item.id }>

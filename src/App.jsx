@@ -13,12 +13,15 @@ import Electronic from "./Routing/products/Electronic";
 import Clothing from "./Routing/products/Clothing";
 import Jwellery from "./Routing/products/Jwellery";
 import ProductDetails from "./Routing/ProductDetails";
+import Props from "./Routing/Props";
+
 
 export default function App() {
     return (<
         div >
         <
             Nav />
+        <Props />
         <
         Routes >
             <
@@ -55,7 +58,9 @@ export default function App() {
                 <Route path="/ProductDetails/:id" element={ < ProductDetails /> } />
 
                 <
-        /Routes>{ " " } <
+        /Routes>{ " " }
+
+                <
         /div>
                 );
 }
