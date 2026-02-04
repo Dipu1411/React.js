@@ -1,66 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 
+import Loader from "./E-commerce webpage/loader/Loader";
+import Navbar from "./E-commerce webpage/navbar/Navbar";
 
-import Nav from "./Routing/Nav";
-import FetchApi from "./hooks/useState/FetchApi";
-import Counter from "./hooks/useState/Counter";
-import Timer from "./hooks/useEffect/Timer";
-import SimpleTodo from "./hooks/useState/SimpleTodo";
-import Product from "./Routing/Product";
-import Electronic from "./Routing/products/Electronic";
-import Clothing from "./Routing/products/Clothing";
-import Jwellery from "./Routing/products/Jwellery";
-import ProductDetails from "./Routing/ProductDetails";
-import Props from "./Routing/Props";
+import Home from "./E-commerce webpage/navbar/pages/Home";
+import Men from "./E-commerce webpage/navbar/pages/Men";
+import Women from "./E-commerce webpage/navbar/pages/Women";
+import Contact from "./E-commerce webpage/navbar/pages/Contact";
+import Login from "./E-commerce webpage/navbar/pages/Login";
 
 
 export default function App() {
-    return (<
-        div >
-        <
-            Nav />
-        <Props />
-        <
-        Routes >
-            <
-                Route path="/FetchApi"
-                element={ < FetchApi /> }
-            />{ " " } <
-                Route path="/Counter"
-                element={ < Counter /> }
-            />{ " " } <
-                Route path="/Timer"
-                element={ < Timer /> }
-            />{ " " } <
-                Route path="/SimpleTodo"
-                element={ < SimpleTodo /> }
-            />{ " " } <
-        Route path="/Product"
-                element={ < Product /> } >
-                <
-                    Route path="Electronic"
-                    element={ < Electronic /> }
-                />{ " " }
-                <
-                    Route path="Clothing"
-                    element={ < Clothing /> }
-                />{ " " }
-                <
-                    Route path="Jwellery"
-                    element={ < Jwellery /> }
-                />{ " " }
+    const [ loading, setLoading ] = useState(true);
+    const [ user, setUser ] = useState(null);
 
-                <                    
-        /Route>{ " " }
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, []);
 
-                <Route path="/ProductDetails/:id" element={ < ProductDetails /> } />
+    if (loading) return <Loader />;
 
-                <
-        /Routes>{ " " }
-
-                <
-        /div>
-                );
+    return (
+        <div>
+            <Navbar />
+            <Routes>
+                <Route path="/Home" element={ <Home /> } />
+                <Route path="/Men" element={ <Men /> } />
+                <Route path="/Women" element={ <Women /> } />
+                <Route path="/Contact" element={ <Contact /> } />
+                <Route path="/Login" element={ <Login /> } />
+            </Routes>
+        </div>
+    );
 }

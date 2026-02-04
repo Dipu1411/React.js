@@ -1,0 +1,106 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav-logo {
+    height: 58px;
+    cursor: pointer;
+}
+
+.nav-search {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.nav-search input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    background: #f5f5f5;
+}
+
+.nav-search input:focus {
+    background: white;
+    border-color: #111;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #111;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 20px;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #ff3f6c;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    cursor: pointer;
+}
+
+
+/* Circle icon */
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    background: #111;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-name {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logout-btn {
+    margin-left: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background: #000;
+}

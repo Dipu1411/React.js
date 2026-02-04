@@ -1,2 +1,4 @@
 import { legacy_createStore as createStore } from "redux";
-export const myStore = createStore();
+import { myReducer } from "./Reducer";
+
+export const myStore = createStore(myReducer);
