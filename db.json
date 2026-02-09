@@ -1,0 +1,119 @@
+{
+    "stealDrips": [{
+            "id": 1,
+            "name": "Characterwear T-shirts",
+            "price": "starting from ₹299",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20251231/epmM/6954d6ad7ef0c7385c36c4e1/-473Wx593H-443332657-white-MODEL.jpg",
+            "link": "https://www.sheinindia.in/s/characterwear-t-shirts-189300"
+        },
+        {
+            "id": 2,
+            "name": "Denim Style",
+            "price": "starting from ₹599",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20250917/nhRL/68ca57d08bfb9009ac0ed9af/-473Wx593H-443382000-indigo-MODEL.jpg",
+            "link": "https://www.sheinindia.in/s/denim-styles-189301"
+        },
+        {
+            "id": 3,
+            "name": "Bodycon Dress",
+            "price": "starting from ₹499",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260124/uYeD/697482317ef0c7385c8f6763/-473Wx593H-443329834-red-MODEL.jpg",
+            "link": "https://www.sheinindia.in/s/solid-bodycon-dresses-189302"
+        },
+        {
+            "id": 4,
+            "name": "Boho Blouses",
+            "price": "starting from ₹249",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260116/dPSx/696a36e7cbfa0d5608793574/-473Wx593H-443391001-white-MODEL.jpg",
+            "link": "https://www.sheinindia.in/s/boho-blouses-189303"
+        },
+        {
+            "id": 5,
+            "name": "Graphic Tees",
+            "price": "starting from ₹199",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260113/UJBk/6966570fcbfa0d56087031d6/-473Wx593H-443391034-maroon-MODEL.jpg",
+            "link": "https://www.sheinindia.in/s/graphic-tees-189304"
+        },
+        {
+            "id": 6,
+            "name": "Straight-fit Jeans",
+            "price": "starting from ₹599",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260127/fGqN/6978cbfdcbfa0d5608a09365/-473Wx593H-443386413-iceblue-MODEL.jpg",
+            "link": "https://www.sheinindia.in/s/straight-fit-jeans-189305"
+        }
+    ],
+
+    "topTrends": [{
+            "id": 1,
+            "title": "#RomanticDateDress",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260127/timv/6978e5467ef0c7385c96cb36/-473Wx593H-443390060-brown-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+        {
+            "id": 2,
+            "title": "#PartyLooks",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260130/dNOn/697c7c0bcbfa0d5608ab0450/-473Wx593H-443391924-grey-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+        {
+            "id": 3,
+            "title": "#ValentineLingerie",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260124/gsnj/69747e5f7ef0c7385c8f5ac3/-473Wx593H-443387924-white-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+        {
+            "id": 4,
+            "title": "#DopamineDressing",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20251229/d2vU/695233a1cbfa0d560832b607/-473Wx593H-443390359-indigoblue-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+        {
+            "id": 5,
+            "title": "#VDayGiftGuide",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260121/Nkoh/6970c8ba7ef0c7385c81bd9f/-473Wx593H-443334772-gold-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+        {
+            "id": 6,
+            "title": "#RedFiestaVibes",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root/20250613/Bov5/684bbd0f7a6cd4182fa6e1bb/-473Wx593H-443330474-red-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        }
+    ],
+
+    "foryou": [{
+            "id": 1,
+            "name": "Socks & Stockings",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260121/U7ku/6970a4207ef0c7385c7f8ed5/-473Wx593H-443333748-multi-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+
+        {
+            "id": 2,
+            "name": "Wide Leg Jeans",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260129/zOO0/697af9bdcbfa0d5608a755b2/-473Wx593H-443392579-iceblue-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+
+        {
+            "id": 3,
+            "name": "Back Print Tees",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260112/dFJM/6964fb957ef0c7385c628e88/-473Wx593H-443388879-black-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+
+        {
+            "id": 4,
+            "name": "Tanks & Camis",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root/20250529/oJQw/683802b655340d4b4f68f1fd/-473Wx593H-443328928-offwhite-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        },
+
+        {
+            "id": 5,
+            "name": "Midi Dresses",
+            "img": "https://assets.sheinindia.in/medias/shein_sys_master/root1/20260106/Okuc/695d28becbfa0d560854125a/-473Wx593H-443383701-navy-MODEL.jpg",
+            "link": "https://www.sheinindia.in"
+        }
+    ]
+}

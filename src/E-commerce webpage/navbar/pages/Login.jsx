@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
@@ -13,13 +13,7 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const loggedIn = localStorage.getItem("isLoggedIn");
-        if (loggedIn === "true") {
-            navigate("/Home");
-        }
-    }, [ navigate ]);
-
+    // handle input change
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -27,50 +21,36 @@ export default function Login() {
         });
     };
 
-    // SIGN UP
+    // SIGNUP
     const handleSignup = () => {
         const { name, email, password } = formData;
 
         if (!name || !email || !password) {
-            setMessage("All fields are required");
+            setMessage("All fields required");
             return;
         }
 
-        localStorage.setItem("user", JSON.stringify({ name, email, password }));
+        localStorage.setItem(
+            "user",
+            JSON.stringify({ name, email, password })
+        );
 
-        setMessage("Signup successful! Please login.");
+        setMessage("Signup successful! Please login");
         setIsLogin(true);
-        setFormData({ name: "", email: "", password: "" });
     };
 
     // LOGIN
     const handleLogin = () => {
         const storedUser = JSON.parse(localStorage.getItem("user"));
 
-        if (!storedUser) {
-            setMessage("No user found. Please sign up first.");
-            setIsLogin(false);
-            return;
-        }
-
         if (
+            storedUser &&
             storedUser.email === formData.email &&
             storedUser.password === formData.password
         ) {
-            // SAVE LOGIN STATE
-            localStorage.setItem("isLoggedIn", "true");
-            localStorage.setItem("userName", storedUser.name);
-
-            window.dispatchEvent(new Event("authChange"));
-
-            setMessage(`Welcome back, ${storedUser.name}!`);
-
-            // CLOSE LOGIN PAGE
-            setTimeout(() => {
-                navigate("/Home"); // or "/"
-            }, 600);
+            navigate("/Home");
         } else {
-            setMessage("Invalid email or password.");
+            setMessage("Invalid email or password");
         }
     };
 
@@ -84,7 +64,6 @@ export default function Login() {
                         type="text"
                         name="name"
                         placeholder="full name"
-                        value={ formData.name }
                         onChange={ handleChange }
                     />
                 ) }
@@ -93,7 +72,6 @@ export default function Login() {
                     type="email"
                     name="email"
                     placeholder="email"
-                    value={ formData.email }
                     onChange={ handleChange }
                 />
 
@@ -101,7 +79,6 @@ export default function Login() {
                     type="password"
                     name="password"
                     placeholder="password"
-                    value={ formData.password }
                     onChange={ handleChange }
                 />
 
@@ -113,15 +90,13 @@ export default function Login() {
 
                 <p className="toggle">
                     { isLogin ? (
-                        <>
-                            New to SHEIN?
-                            <span onClick={ () => setIsLogin(false) }> Sign Up</span>
-                        </>
+                        <span onClick={ () => setIsLogin(false) }>
+                            New user? Signup
+                        </span>
                     ) : (
-                        <>
-                            ALREADY HAVE AN ACCOUNT?
-                            <span onClick={ () => setIsLogin(true) }> Login</span>
-                        </>
+                        <span onClick={ () => setIsLogin(true) }>
+                            Already user? Login
+                        </span>
                     ) }
                 </p>
             </div>

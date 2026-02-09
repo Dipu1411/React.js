@@ -1,43 +1,23 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Dropdown from "./DropDown";
 import "./navbar.css";
 
 export default function Navbar() {
-    const [ isLoggedIn, setIsLoggedIn ] = useState(false);
-    const [ userName, setUserName ] = useState("");
+    const [ menu, setMenu ] = useState(null);
+    const [ user, setUser ] = useState(null);
     const navigate = useNavigate();
 
+    // check login when navbar loads
     useEffect(() => {
-        const syncAuth = () => {
-            const loggedIn = localStorage.getItem("isLoggedIn");
-            const name = localStorage.getItem("userName");
-
-            if (loggedIn === "true" && name) {
-                setIsLoggedIn(true);
-                setUserName(name);
-            } else {
-                setIsLoggedIn(false);
-                setUserName("");
-            }
-        };
-
-        // run once
-        syncAuth();
-
-        window.addEventListener("authChange", syncAuth);
-
-        return () => {
-            window.removeEventListener("authChange", syncAuth);
-        };
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+        setUser(storedUser);
     }, []);
 
     // LOGOUT
     const handleLogout = () => {
-        localStorage.removeItem("isLoggedIn");
-        localStorage.removeItem("userName");
-
-        window.dispatchEvent(new Event("authChange"));
-
+        localStorage.removeItem("user");
+        setUser(null);
         navigate("/Home");
     };
 
@@ -53,16 +33,38 @@ export default function Navbar() {
 
             <nav className="nav-links">
                 <Link to="/Home">Home</Link>
-                <Link to="/Men">Men</Link>
-                <Link to="/Women">Women</Link>
-                <Link to="/Contact">Contact</Link>
 
-                { isLoggedIn ? (
+                <div
+                    className="dropdown"
+                    onMouseEnter={ () => setMenu("women") }
+                    onMouseLeave={ () => setMenu(null) }
+                >
+                    <Link to="/Women" className="nav-item">Women</Link>
+
+                    { menu === "women" && <Dropdown type="women" /> }
+                </div>
+
+                <div
+                    className="dropdown"
+                    onMouseEnter={ () => setMenu("men") }
+                    onMouseLeave={ () => setMenu(null) }
+                >
+                    <Link to="/Men">Men</Link>
+
+                    { menu === "men" && <Dropdown type="men" /> }
+                </div>
+
+                <Link to="/Cart">Cart</Link>
+
+
+                { user ? (
                     <div className="user-box">
                         <div className="user-icon">
-                            { userName.charAt(0).toUpperCase() }
+                            { user.name.charAt(0).toUpperCase() }
                         </div>
-                        <span className="user-name">{ userName }</span>
+
+                        <span className="user-name">{ user.name }</span>
+
                         <button className="logout-btn" onClick={ handleLogout }>
                             Logout
                         </button>
